@@ -1,14 +1,16 @@
-<h1></h1>
+<h1>List</h1>
 
 <table>
   <tr>
-    <th></th>
-    <th></th>
+    <th>Name</th>
+    <th>Email</th>
     <th></th>
   </tr>
 
 <% @users.each do |user| %>
   <tr>
+    <td><%= user.Name %></td>
+    <td><%= user.Email %></td>
     <td><%= link_to '', user %></td>
     <td><%= link_to '', edit_user_path(user) %></td>
     <td><%= link_to '', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -18,4 +20,4 @@
 
 <br />
 
-<%= link_to '', new_user_path %>
+<%= link_to 'New User', new_user_path %>
